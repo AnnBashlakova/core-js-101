@@ -128,7 +128,6 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
 function getLastDigit(value) {
   let stringNew = String(value);
   let arrNew = stringNew.split(',');
-  let arrNew = stringNew.split('');
   return arrNew[arrNew.length-1];
 }
 
