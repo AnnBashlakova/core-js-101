@@ -126,13 +126,10 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  let stringNew = String(value);
-  let arrNew = stringNew.split(',');
-  return arrNew[arrNew.length-1];
+  const stringNew = String(value);
+  const arrNew = stringNew.split(',');
+  return arrNew[arrNew.length - 1];
 }
-
-
-
 
 /**
  * Returns a number by given string representation.
@@ -146,7 +143,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-  return parse(value, 10)
+  return +(value);
 }
 
 /**
@@ -162,8 +159,8 @@ function parseNumberFromString(value) {
  *   3,3,3   => 5.196152422706632
  *   1,2,3   => 3.741657386773941
  */
-function getParallelepipedDiagonal(/* a, b, c */) {
-  throw new Error('Not implemented');
+function getParallelepipedDiagonal(a, b, c) {
+  return Math.sqrt(a ** 2 + b ** 2 + c ** 2);
 }
 
 
@@ -184,8 +181,8 @@ function getParallelepipedDiagonal(/* a, b, c */) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  return (Math.round(num / (10 ** pow)) * (10 ** pow));
 }
 
 /**

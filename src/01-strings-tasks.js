@@ -19,7 +19,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  return value1 + value2;
+  return value1.concat(value2);
 }
 
 
@@ -142,7 +142,7 @@ function removeFirstOccurrences(/* str, value */) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.slice(1,-1);
+  return str.slice(1, -1);
 }
 
 
